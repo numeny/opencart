@@ -32,7 +32,9 @@ class ModelInstallInstall extends Model {
 
 			$db->query("SET CHARACTER SET utf8");
 
-			$db->query("SET @@session.sql_mode = 'MYSQL40'");
+            # start delete by bdg
+			# $db->query("SET @@session.sql_mode = 'MYSQL40'");
+            # end delete by bdg
 
 			$db->query("DELETE FROM `" . $data['db_prefix'] . "user` WHERE user_id = '1'");
 
